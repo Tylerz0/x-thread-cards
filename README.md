@@ -2,6 +2,8 @@
 
 [English](README.en.md)
 
+一个把普通文案批量生成「X/Twitter 截图风格图片」的 Codex / Claude Code skill。
+
 ![X Thread Cards 预览](docs/preview.png)
 
 一句话：把一段普通文案，批量做成「看起来像 X/Twitter 帖子截图」的图片。
@@ -13,6 +15,17 @@
 - 一个输出目录。
 
 它会自动生成一组 X 风格截图卡片，并附带一张总览图，方便你直接挑选、发布或继续微调。
+
+## 为什么要用它
+
+用 AI 画图做这种截图感图片，最容易翻车的地方就是文字：
+
+- 中文会糊。
+- 标点会乱。
+- 账号名会被改。
+- 认证标识会变形。
+
+这个 skill 不让图像模型画字，而是用本地字体直接排版，所以更适合做需要准确中文的内容图。
 
 ## 适合什么场景
 
@@ -55,6 +68,27 @@
 ```text
 01_demo.png
 contact_sheet.png
+```
+
+完整示例在 [examples/slides.json](examples/slides.json)，示例输出在 [examples/output/demo.png](examples/output/demo.png)。
+
+## 可以怎么介绍它
+
+如果你想把这个项目分享给别人，可以直接用这段：
+
+```text
+我做了一个 Codex / Claude Code skill：
+
+把普通文案批量生成「X/Twitter 截图风格」图片。
+
+重点是：
+- 不靠 AI 画字，所以中文不会乱
+- 头像、昵称、认证标识可以从截图里保留
+- 自动处理中文标点换行
+- 适合做小红书、公众号、课程资料里的社交截图感配图
+
+仓库在这里：
+https://github.com/Tylerz0/x-thread-cards
 ```
 
 ## 目录结构
@@ -105,7 +139,7 @@ Use $x-thread-cards to turn this account screenshot and these captions into X-st
 python skills/x-thread-cards/scripts/generate_x_thread_cards.py \
   --account-screenshot /path/to/account-screenshot.png \
   --out-dir /path/to/output \
-  --slides-json /path/to/slides.json \
+  --slides-json examples/slides.json \
   --avatar-box 28,253,174,399 \
   --name-box 206,272,644,324 \
   --meta "@lin_ai_notes · 14小时"

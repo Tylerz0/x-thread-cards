@@ -2,6 +2,8 @@
 
 [中文说明](README.md)
 
+A Codex / Claude Code skill that turns ordinary copy into X/Twitter-style screenshot cards.
+
 ![X Thread Cards preview](docs/preview.png)
 
 Turn ordinary post copy into a batch of X/Twitter-style screenshot cards.
@@ -9,6 +11,17 @@ Turn ordinary post copy into a batch of X/Twitter-style screenshot cards.
 Give it an account screenshot, a list of titles and captions, and an output folder. It preserves the avatar/name area from the screenshot, renders the text locally, and exports one PNG card per item plus a contact sheet preview.
 
 This is useful when you want the look of a social screenshot without asking an image model to redraw exact Chinese text, account names, punctuation, or verification badges.
+
+## Why Use It
+
+Image models often break the exact parts that matter in screenshot-style content:
+
+- Chinese text gets distorted.
+- Punctuation moves to awkward places.
+- Account names drift.
+- Verification badges are redrawn incorrectly.
+
+This skill renders the layout locally with real fonts, so it is better for content cards that need accurate text.
 
 ## Use Cases
 
@@ -42,7 +55,7 @@ skills/x-thread-cards/
 The easiest way is to open Codex or Claude Code and say:
 
 ```text
-Please install this skill: [your GitHub link]
+Please install this skill: https://github.com/Tylerz0/x-thread-cards
 ```
 
 It should install `skills/x-thread-cards` from this repository into your local Codex skills directory.
@@ -74,13 +87,15 @@ The bundled renderer can also be run directly:
 python skills/x-thread-cards/scripts/generate_x_thread_cards.py \
   --account-screenshot /path/to/account-screenshot.png \
   --out-dir /path/to/output \
-  --slides-json /path/to/slides.json \
+  --slides-json examples/slides.json \
   --avatar-box 28,253,174,399 \
   --name-box 206,272,644,324 \
   --meta "@lin_ai_notes · 14小时"
 ```
 
 `--avatar-box` and `--name-box` are pixel crop boxes from the account screenshot in `x1,y1,x2,y2` format.
+
+See [examples/slides.json](examples/slides.json) for sample input and [examples/output/demo.png](examples/output/demo.png) for sample output.
 
 ## Slides JSON
 
