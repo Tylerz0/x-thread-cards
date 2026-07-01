@@ -72,25 +72,6 @@ contact_sheet.png
 
 完整示例在 [examples/slides.json](examples/slides.json)，示例输出在 [examples/output/demo.png](examples/output/demo.png)。
 
-## 可以怎么介绍它
-
-如果你想把这个项目分享给别人，可以直接用这段：
-
-```text
-我做了一个 Codex / Claude Code skill：
-
-把普通文案批量生成「X/Twitter 截图风格」图片。
-
-重点是：
-- 不靠 AI 画字，所以中文不会乱
-- 头像、昵称、认证标识可以从截图里保留
-- 自动处理中文标点换行
-- 适合做小红书、公众号、课程资料里的社交截图感配图
-
-仓库在这里：
-https://github.com/Tylerz0/x-thread-cards
-```
-
 ## 目录结构
 
 ```text
