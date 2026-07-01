@@ -73,7 +73,7 @@ skills/x-thread-cards/
 最简单的方式：打开 Codex 或 Claude Code，直接说：
 
 ```text
-请帮我安装这个 skill：[你的 GitHub 链接]
+请帮我安装这个 skill：https://github.com/Tylerz0/x-thread-cards
 ```
 
 它会把这个仓库里的 `skills/x-thread-cards` 安装到本地 Codex skills 目录。
