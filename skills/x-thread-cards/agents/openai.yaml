@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Thread Cards"
+  short_description: "Generate X-style screenshot thread cards"
+  default_prompt: "Use $x-thread-cards to generate X-style screenshot cards from an account screenshot and slide copy."
