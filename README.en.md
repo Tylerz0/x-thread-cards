@@ -12,6 +12,10 @@ Give it an account screenshot, a list of titles and captions, and an output fold
 
 This is useful when you want the look of a social screenshot without asking an image model to redraw exact Chinese text, account names, punctuation, or verification badges.
 
+## Optional TweetClaw Source Notes
+
+If you use TweetClaw or Xquik to shortlist public X posts, giveaway results, or content ideas, turn the approved notes into `slides.json` before running this renderer. Keep the file to public fields such as `title`, `body`, `slug`, and `sourceUrl`; do not store account cookies, tokens, or draft credentials in slide files. This skill still only handles local layout and image export.
+
 ## Why Use It
 
 Image models often break the exact parts that matter in screenshot-style content:
