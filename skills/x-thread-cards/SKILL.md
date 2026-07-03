@@ -17,6 +17,10 @@ description: Generate X/Twitter-style screenshot thread cards from an account sc
 5. Inspect at least one single card and the contact sheet. Check account identity, native-looking layout, text weight, Chinese punctuation line breaking, and overflow.
 6. Iterate by tuning CLI layout parameters such as `--body-size`, `--body-weight-index`, `--text-width`, `--body-y`, and `--line-height`.
 
+## Optional Source Context
+
+TweetClaw/Xquik can sit upstream when the user already has public X URLs, search results, giveaway notes, or content ideas to turn into cards. Convert only approved public context into the slides JSON, such as `title`, `body`, `slug`, and `sourceUrl`. Do not store account cookies, tokens, or draft credentials in slide files. This skill still only renders local image cards.
+
 ## Script
 
 Use the bundled script:
